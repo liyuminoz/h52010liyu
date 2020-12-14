@@ -1,0 +1,43 @@
+.renqi {
+    @extend %header-top;
+}
+
+.renqi-title {
+    padding: 10px 0px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    color: #333;
+    width: 100%;
+    font-size: 20px;
+}
+
+.renqi-list {
+    width: 100%;
+}
+
+.renqi-li {
+    width: 316px;
+    height: 366px;
+    float: left;
+    margin: 17px 17px 17px 0;
+}
+
+.datu {
+    width: 316px;
+    height: 316px;
+}
+
+.datu-bottom {
+    width: 100%;
+    height: 40px;
+}
+
+.xiaotu {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-position: -130px -584px;
+    padding: 0px 6px 6px 0px
+}

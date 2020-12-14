@@ -1,0 +1,36 @@
+.show {
+    @extend %header-top;
+    margin-top: 12px;
+}
+
+.show img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.showl {
+    width: 317px;
+    float: left;
+    margin-right: 24px;
+}
+
+.showm {
+    width: 318px;
+    float: left;
+    margin-right: 24px;
+}
+
+.showr {
+    width: 317px;
+    float: left;
+}
+
+//人气良品
+.renqi {
+    @extend %header-top;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+}

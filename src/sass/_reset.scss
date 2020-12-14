@@ -1,0 +1,130 @@
+@charset "utf-8";
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+hr,
+form,
+table,
+fieldset,
+legend,
+textarea,
+img,
+ol,
+li,
+ul,
+dl,
+dt,
+dd,
+input,
+button,
+header,
+main,
+footer,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+// 避免一些bug，防止一些不兼容的问题，可加可不加
+section,
+header,
+footer,
+nav,
+aside {
+    display: block;
+}
+
+body {
+    font-size: 12px;
+    // 将页面文字先设置成常用的12px
+    font-family: "微软雅黑";
+}
+
+a,
+u {
+    color: #000;
+    text-decoration: none;
+    // 去除超链接下划线
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    // 去除列表样式
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-weight: normal;
+    // 将加粗标签变常规
+}
+
+input,
+button {
+    outline: 0;
+    // input点击时的聚焦线去掉
+}
+
+i,
+em {
+    font-style: normal;
+    // 倾斜字体变常规
+}
+
+img {
+    vertical-align: middle;
+    // 图片文字垂直居中对齐
+    // display:block;
+}
+
+// 禁止用户拖拽大小
+// textarea{resize:none;}
+// 封装一些类名
+.noborder {
+    border: none!important;
+    // 去除边框
+}
+
+.nobg {
+    background: none!important;
+}
+
+// 省略号
+.text_ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.clearFix:after {
+    // 解决高度塌陷
+    content: '';
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}

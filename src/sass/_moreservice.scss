@@ -1,0 +1,116 @@
+// more
+.more {
+    margin: 40px auto 0;
+    width: 148px;
+    height: 50px;
+    border: 5px solid #878787;
+    text-align: center;
+    color: #878787;
+    font-size: 20px;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.more:hover {
+    background: #878787;
+    color: #fff;
+}
+
+//service
+.service {
+    width: 100%;
+    background: #fbfdfe;
+    padding: 51px 0px 71px
+}
+
+.service a {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 45px;
+    width: 230px;
+    height: 16px;
+    background: url(https://imgs-qn.iliangcang.com/images/default/icon.png?v1503) no-repeat;
+    background-position: 45px -417px
+}
+
+dt {
+    font-weight: 400
+}
+
+.service a i {
+    position: absolute;
+    left: 10px;
+    top: -4px;
+    color: #737373;
+    font-size: 18px
+}
+
+.sogen {
+    width: 1000px;
+    margin: 0 auto;
+    height: 60px;
+    margin-top: 42px
+}
+
+.sogen dl {
+    float: left
+}
+
+.sogen .dd1 {
+    display: block;
+    float: left;
+    width: 56px;
+    height: 60px;
+    background: url(https://imgs-qn.iliangcang.com/images/default/icon.png?v1503) no-repeat;
+    background-position: 0 -355px
+}
+
+.sogen .dd2 {
+    display: block;
+    float: left;
+    width: 56px;
+    height: 60px;
+    background: url(https://imgs-qn.iliangcang.com/images/default/icon.png?v1503) no-repeat;
+    background-position: -153px -217px
+}
+
+.sogen .dd3 {
+    display: block;
+    float: left;
+    width: 56px;
+    height: 60px;
+    background: url(https://imgs-qn.iliangcang.com/images/default/icon.png?v1503) no-repeat;
+    background-position: -57px -353px
+}
+
+.sogen .dd4 {
+    display: block;
+    float: left;
+    width: 56px;
+    height: 60px;
+    background: url(https://imgs-qn.iliangcang.com/images/default/icon.png?v1503) no-repeat;
+    background-position: -114px -353px
+}
+
+.sogen dt {
+    float: left;
+    width: 170px;
+    height: 60px;
+    margin-left: 20px;
+    padding-top: 6px;
+    box-sizing: border-box
+}
+
+.sogen dt p {
+    line-height: 24px;
+    font-size: 14px;
+    color: #737373;
+    letter-spacing: 1.5px
+}
+
+.sogen dt h2 {
+    line-height: 22px;
+    color: #ccc;
+    font-size: 12px
+}

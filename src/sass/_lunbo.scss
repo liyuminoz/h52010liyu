@@ -1,0 +1,64 @@
+.lunbo {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    height: 475px;
+    padding-bottom: 32px;
+    padding-top: 50px;
+}
+
+.lunbo ul li {
+    width: 1000px;
+    height: 475px;
+    position: absolute;
+    opacity: 0;
+}
+
+//小长方块
+.lunbo ol {
+    position: absolute;
+    left: 500px;
+    bottom: 0;
+}
+
+.lunbo ol li {
+    float: left;
+    width: 20px;
+    height: 5px;
+    background: #ccc;
+    margin-right: 5px;
+}
+
+.lunbo ol li.active {
+    background: #25292e;
+}
+
+//左边箭头
+%lunboleft {
+    position: absolute;
+    top: 150px;
+    font-size: 100px;
+    color: gray;
+    opacity: 0;
+}
+
+.lunboleft {
+    @extend %lunboleft;
+    left: 0;
+    transition: all 1s;
+}
+
+.lunbo:hover .lunboleft {
+    opacity: 1;
+}
+
+//右边箭头
+.lunboright {
+    @extend %lunboleft;
+    right: 0;
+    transition: all 1s;
+}
+
+.lunbo:hover .lunboright {
+    opacity: 1;
+}
