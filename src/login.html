@@ -5,43 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            background: #999;
-        }
-        
-        .reglogo {
-            width: 113px;
-            height: 195px;
-            margin: 20px auto 0;
-        }
-        
-        .box {
-            width: 300px;
-            height: 400px;
-            background: red;
-            margin: 0 auto;
-        }
-    </style>
-</head>
+    <link rel="stylesheet" href="style/login.css">
 
-<body>
-    <div class="reglogo">
-        <img src="https://www.iliangcang.com/images/nlicon.png" alt="">
-    </div>
+    <body>
 
-    <form action="">
-        <div class="box">
-            <input type="text" placeholder="输入手机号">
-            <input type="text" placeholder="输入验证码"><input type="button" value="获取验证码">
-        </div>
-    </form>
-</body>
+        <form action="" class="logform">
+            <div class="loglogo">
+                <img src="https://www.iliangcang.com/images/nlicon.png" alt="">
+            </div>
+
+            <div class="box">
+                <input type="text" placeholder="输入手机号" class="logbox-ipt noborder logbox-ipt1">
+                <input type="text" placeholder="输入验证码" class="logbox-ipt noborder logbox-ipt2"><input type="button" value="获取验证码" class="logbox-ipt3">
+            </div>
+            <div class="logauto">
+                <input type="checkbox" name="isauto" value="1" checked="checked" style="vertical-align:middle;"> <span style="vertical-align:middle;">自动登录</span>
+            </div>
+            <div class="logdenglu">
+                <input type="submit" value="登录" class="loginBtn" style="border-radius: 4px;font-weight: normal;">
+            </div>
+        </form>
+    </body>
 
 </html>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

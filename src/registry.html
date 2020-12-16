@@ -6,20 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>注册页面</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/registry.css">
 </head>
 
 <body>
-    <fieldset style="width:500px;margin:0 auto;">
-        <legend>用户注册</legend>
-        <form action="http://localhost/JS2010/week06/Day%2029-Day%2031_jquery/loginregistry/php/reg.php" method="post">
-            <p><label for="">用户名：</label><input type="text" name="username" id="username"><span></span></p>
-            <p><label for="">密　码：</label><input type="password" name="password"></p>
-            <p><label for="">邮　箱：</label><input type="text" name="email"></p>
-            <p><input type="submit" value="提交注册" name="submit" id="submit"></p>
-        </form>
-    </fieldset>
+    <form action="   " class="regform" method="POST" enctype="application/x-www-form-urlencoded">
+        <div class="reglogo">
+            <img src="https://www.iliangcang.com/images/default/logo_icon.png">
+        </div>
+        <div class="regbox">
+            <div class="phone">
+                手机号： <input type="text" class="noborder" placeholder="请输入手机号" name="phone">
+            </div>
+            <div class="yanzheng">
+                验证码： <input type="text" class="noborder" placeholder="请输入验证码" name="yanzheng">
+            </div>
+            <div class="mima">
+                创建密码： <input type="text" class="noborder" placeholder="6到20位字符组成，区分大小写" name="mima">
+            </div>
+            <div class="queren">
+                确认密码： <input type="text" class="noborder" placeholder="请确认密码" name="queren">
+            </div>
+            <div class="agree">
+                <input type="checkbox" checked="checked" id="ourtreaty" class="vertPos">
+                <label for="ourtreaty" style="padding-left:6px;color:#ffffff;" class="vertPos">同意</label>
+                <a href="http://www.iliangcang.com/i/our/service" style="color:#0c79cc;" class="vertPos" arget="_blank">&nbsp;良仓注册条款</a>
+            </div>
+            <input class="regBtn" type="submit" value="立即注册" name="submit">
+            <div class="lianjie">
+                <a href="/i/oauth/qq/" class="quikLoginIcon icon_QQ_36" title="QQ"></a>
+                <a href="/i/oauth/weibo/" class="quikLoginIcon icon_sina_36" title="新浪微博"></a>
+                <a href="/i/oauth/douban/" class="quikLoginIcon icon_douban_36" title="豆瓣"></a>
+                <a href="/i/oauth/tqq/" class="quikLoginIcon icon_qqwb_36" title="腾讯微博"></a>
+                <a href="login.html" class="loginliang">登陆良仓</a>
+            </div>
+        </div>
+    </form>
+
+
 </body>
 
 </html>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./script/Ajaxcallback.js"></script>
 <script src="script/registry.js"></script>

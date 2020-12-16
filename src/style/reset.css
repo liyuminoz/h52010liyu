@@ -1,0 +1,119 @@
+@charset "utf-8";
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+hr,
+form,
+table,
+fieldset,
+legend,
+textarea,
+img,
+ol,
+li,
+ul,
+dl,
+dt,
+dd,
+input,
+button,
+header,
+main,
+footer,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+section,
+header,
+footer,
+nav,
+aside {
+    display: block;
+}
+
+body {
+    font-size: 12px;
+    font-family: "微软雅黑";
+}
+
+a,
+u {
+    color: #000;
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-weight: normal;
+}
+
+input,
+button {
+    outline: 0;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+img {
+    vertical-align: middle;
+}
+
+textarea {
+    resize: none;
+}
+
+.noborder {
+    border: none!important;
+}
+
+.nobg {
+    background: none!important;
+}
+
+.text_ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.clearFix:after {
+    content: '';
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}

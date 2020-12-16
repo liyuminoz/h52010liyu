@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #999;
+}
+
+.regform {
+    width: 600px;
+    margin: 100px auto 0;
+}
+
+.reglogo {
+    width: 226px;
+    height: 106px;
+    margin: 0 auto;
+}
+
+.regbox {
+    color: #fff;
+    font-size: 14px;
+}
+
+.phone,
+.yanzheng,
+.mima,
+.queren {
+    margin-top: 20px;
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+.noborder {
+    background: #CBCBCB;
+}
+
+.phone input,
+.yanzheng input,
+.mima input,
+.queren input {
+    width: 300px;
+    height: 50px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.agree {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.regBtn {
+    resize: none;
+    outline: none;
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+    border: 0;
+    background: #25292e;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 170px;
+    margin-top: 10px;
+}
+
+
+/* 下方链接 */
+
+.lianjie {
+    margin-left: 100px;
+}
+
+
+/* qq */
+
+.icon_QQ_36 {
+    background: url(../images/icon.png) no-repeat -48px -455px;
+    margin-left: 5px;
+}
+
+.quikLoginIcon {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #878787;
+}
+
+
+/* weibo */
+
+.icon_sina_36 {
+    background: url(../images/icon.png) no-repeat -78px -455px;
+}
+
+.quikLoginIcon {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+
+
+/* 豆瓣 */
+
+.icon_douban_36 {
+    background: url(../images/icon.png) no-repeat -111px -455px;
+}
+
+.quikLoginIcon {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+
+
+/* 腾讯微博 */
+
+.icon_qqwb_36 {
+    background: url(../images/icon.png) no-repeat -17px -455px;
+}
+
+.quikLoginIcon {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+
+.loginliang {
+    float: right;
+}

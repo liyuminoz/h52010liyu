@@ -70,39 +70,42 @@
             <!-- nav -->
             <ul class="header-nav">
                 <li class="homepage">首页</li>
-                <li class="shop">商店
-                    <!-- nav-shangdian -->
-                    <div class="shangdian">
-                        <div>
-                            <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23687.png" alt="">
-                            <p>家居</p>
+                <a href="list.html">
+                    <li class="shop">商店
+                        <!-- nav-shangdian -->
+                        <div class="shangdian">
+                            <div>
+                                <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23687.png" alt="">
+                                <p>家居</p>
+                            </div>
+                            <div>
+                                <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23686.png" alt="">
+                                <p>文具</p>
+                            </div>
+                            <div>
+                                <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23683.png" alt="">
+                                <p>数码</p>
+                            </div>
+                            <div>
+                                <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23682.png" alt="">
+                                <p>玩乐</p>
+                            </div>
+                            <div>
+                                <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23684.png" alt="">
+                                <p>餐厨</p>
+                            </div>
+                            <div>
+                                <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23680.png" alt="">
+                                <p>美食</p>
+                            </div>
+                            <div style="margin-right: 0px;">
+                                <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23678.png" alt="">
+                                <p>服装</p>
+                            </div>
                         </div>
-                        <div>
-                            <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23686.png" alt="">
-                            <p>文具</p>
-                        </div>
-                        <div>
-                            <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23683.png" alt="">
-                            <p>数码</p>
-                        </div>
-                        <div>
-                            <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23682.png" alt="">
-                            <p>玩乐</p>
-                        </div>
-                        <div>
-                            <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23684.png" alt="">
-                            <p>餐厨</p>
-                        </div>
-                        <div>
-                            <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23680.png" alt="">
-                            <p>美食</p>
-                        </div>
-                        <div style="margin-right: 0px;">
-                            <img src="https://imgs-qn.iliangcang.com/ware/sowhatimg/ware/orig/2/23/23678.png" alt="">
-                            <p>服装</p>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                </a>
+
                 <li class="magazine">杂志
                     <!-- nav-zazhi -->
                     <div class="zazhi">
@@ -301,6 +304,7 @@
 </html>
 <!-- 引入jQuery文件 -->
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 <!-- 轮播图js -->
 <script>
     // 轮播图
@@ -379,7 +383,7 @@
     let ajax = new XMLHttpRequest();
 
     //2.打开通信的接口
-    ajax.open('get', 'http://localhost/dashboard/liangcang/src/php/chanpin.php', true);
+    ajax.open('get', 'http://10.31.161.103/dashboard/liangcang/src/php/chanpin.php', true);
 
     //3.发送解析
     ajax.send();
@@ -396,7 +400,7 @@
             for (let value of chanpindata) {
                 chanpinHtml += `
                 <li class="renqi-li">
-                    <img src="${value.da_tu}" class="datu"/>
+                    <img data-original="${value.da_tu}" class="datu lazy"/>
                     <div class="datu-bottom">
                         <a href="">
                             <img src="${value.xiao_tu}" class="xiaotu"/>${value.pin_pai}
@@ -408,6 +412,9 @@
 
             }
             oUl.innerHTML = chanpinHtml;
+            $("img.lazy").lazyload({
+                effect: "fadeIn"
+            });
         }
     }
 </script>
