@@ -189,6 +189,7 @@ input {
 }
 
 .p-btn input {
+    float: left;
     display: inline-block;
     width: 50px;
     height: 46px;
@@ -197,7 +198,6 @@ input {
     color: black;
     margin-left: 50px;
     border: 1px solid gray;
-    /* float: left; */
 }
 
 .p-btn a {

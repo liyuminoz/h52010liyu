@@ -8,7 +8,7 @@ body {
 }
 
 .regform {
-    width: 800px;
+    width: 900px;
     margin: 100px auto 0;
 }
 
@@ -24,12 +24,12 @@ body {
 }
 
 .phone,
-.yanzheng,
+.username,
 .mima,
 .queren {
-    margin-top: 20px;
+    margin-top: 25px;
     font-weight: bold;
-    margin-left: 100px;
+    margin-left: 256px;
 }
 
 .noborder {
@@ -37,7 +37,7 @@ body {
 }
 
 .phone input,
-.yanzheng input,
+.username input,
 .mima input,
 .queren input {
     width: 300px;
@@ -48,7 +48,7 @@ body {
 
 .agree {
     margin-top: 30px;
-    margin-left: 100px;
+    margin-left: 248px;
 }
 
 .regBtn {
@@ -63,7 +63,7 @@ body {
     color: #ffffff;
     font-weight: bold;
     margin-bottom: 10px;
-    margin-left: 170px;
+    margin-left: 319px;
     margin-top: 10px;
 }
 
@@ -71,7 +71,7 @@ body {
 /* 下方链接 */
 
 .lianjie {
-    margin-left: 100px;
+    margin-left: 273px;
 }
 
 

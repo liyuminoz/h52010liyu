@@ -390,15 +390,15 @@
 
     //4.通过事件监听就绪状态码的编号
     ajax.onreadystatechange = function() {
-            //ajax.readyState 获取就绪状态码
-            if (ajax.readyState === 4) {
+        //ajax.readyState 获取就绪状态码
+        if (ajax.readyState === 4) {
 
-                let chanpindata = JSON.parse(ajax.responseText);
-                console.log(chanpindata);
-                let chanpinHtml = '';
-                let oUl = document.querySelector('.renqi-list');
-                for (let value of chanpindata) {
-                    chanpinHtml += `
+            let chanpindata = JSON.parse(ajax.responseText);
+            console.log(chanpindata);
+            let chanpinHtml = '';
+            let oUl = document.querySelector('.renqi-list');
+            for (let value of chanpindata) {
+                chanpinHtml += `
                 <li class="renqi-li">
                     <div class='col' id="pic1">
                     <img data-original="${value.da_tu}" class="datu lazy"/>
@@ -415,20 +415,22 @@
                 </li>
              `;
 
-                }
-                oUl.innerHTML = chanpinHtml;
-                $("img.lazy").lazyload({
-                    effect: "fadeIn"
-                });
             }
+            oUl.innerHTML = chanpinHtml;
+            $("img.lazy").lazyload({
+                effect: "fadeIn"
+            });
         }
-        // $('.col').hover(function() {
-        //     $(this).find('a').stop(true).animate({
-        //         top: 0
-        //     });
-        // }, function() {
-        //     $(this).find('a').stop(true).animate({
-        //         top: 170
-        //     });
-        // });
+    }
+</script>
+<script>
+    $('.col').hover(function() {
+        $(this).find('a').stop(true).animate({
+            top: 0
+        });
+    }, function() {
+        $(this).find('a').stop(true).animate({
+            top: 316
+        });
+    });
 </script>

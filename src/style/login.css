@@ -10,8 +10,7 @@ body {
 }
 
 .logform {
-    width: 300px;
-    height: 400px;
+    width: 800px;
     margin: 100px auto 0;
 }
 
@@ -22,7 +21,7 @@ body {
 }
 
 .box {
-    margin-top: 50px;
+    margin: 50px auto 0;
     width: 300px;
 }
 
@@ -30,43 +29,29 @@ body {
     margin-left: 20px;
 }
 
-.logbox-ipt1 {
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin: 0;
-    padding: 0;
-    font-family: 'Hiragino Sans GB', 'å†¬é’é»‘ä½“', 'Hiragino Kaku Gothic ProN', 'Microsoft Yahei', 'Simsun', 'Arial', 'Helvetica', 'sans-serif';
-    resize: none;
-    outline: none;
-    border: 0;
-    border-bottom: solid 1px #000;
-    font-size: 18px;
-    width: 265px;
-    height: 34px;
-    background: url('https://www.iliangcang.com/images/nlphone.png') no-repeat 0px 6px;
-    padding-left: 35px;
-    margin-bottom: 20px
+.username,
+.mima {
+    margin-top: 20px;
+    font-weight: bold;
 }
 
-.logbox-ipt2 {
-    /* width: 172px;
-    height: 35px;
-    outline: none; */
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin: 0;
-    padding: 0;
-    font-family: 'Hiragino Sans GB', '冬青黑体', 'Hiragino Kaku Gothic ProN', 'Microsoft Yahei', 'Simsun', 'Arial', 'Helvetica', 'sans-serif';
-    resize: none;
-    outline: none;
+.noborder {
+    background: #CBCBCB;
+}
+
+.username input,
+.mima input {
+    width: 300px;
+    height: 50px;
+    padding-left: 20px;
+    font-weight: bold;
+    outline: 0;
     border: 0;
-    border-bottom: solid 1px #000;
-    font-size: 18px;
-    width: 137px;
-    height: 34px;
-    float: left;
-    background: url('https://www.iliangcang.com/images/nlcode.png') no-repeat 2px 8px;
-    padding-left: 35px;
+}
+
+.agree {
+    margin-top: 30px;
+    margin-left: 100px;
 }
 
 .logbox-ipt3 {
@@ -83,23 +68,21 @@ body {
 }
 
 .logauto {
-    border-collapse: collapse;
-    border-spacing: 0;
     padding-top: 10px;
     color: #000;
+    margin-left: 252px;
 }
 
 .logdenglu {
     color: #495c81;
-    margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     padding-top: 22px;
+    margin-left: 260px;
 }
 
 .loginBtn {
-    font-family: "Hiragino Sans GB", 冬青黑体, "Hiragino Kaku Gothic ProN", "Microsoft Yahei", Simsun, Arial, Helvetica, sans-serif;
     resize: none;
     outline: none;
     cursor: pointer;
@@ -112,4 +95,38 @@ body {
     margin-bottom: 30px;
     border-radius: 4px;
     font-weight: normal;
+}
+
+.logusername {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+    resize: none;
+    outline: none;
+    border: 0;
+    border-bottom: solid 1px #000;
+    font-size: 18px;
+    width: 137px;
+    height: 34px;
+    float: left;
+    background: url('https://www.iliangcang.com/images/nlcode.png') no-repeat 2px 8px;
+    padding-left: 35px;
+}
+
+.logmima {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+    resize: none;
+    outline: none;
+    border: 0;
+    border-bottom: solid 1px #000;
+    font-size: 18px;
+    width: 137px;
+    height: 34px;
+    float: left;
+    background: url('https://www.iliangcang.com/images/nlcode.png') no-repeat 2px 8px;
+    padding-left: 35px;
 }
