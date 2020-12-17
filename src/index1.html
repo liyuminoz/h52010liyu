@@ -390,31 +390,45 @@
 
     //4.通过事件监听就绪状态码的编号
     ajax.onreadystatechange = function() {
-        //ajax.readyState 获取就绪状态码
-        if (ajax.readyState === 4) {
+            //ajax.readyState 获取就绪状态码
+            if (ajax.readyState === 4) {
 
-            let chanpindata = JSON.parse(ajax.responseText);
-            console.log(chanpindata);
-            let chanpinHtml = '';
-            let oUl = document.querySelector('.renqi-list');
-            for (let value of chanpindata) {
-                chanpinHtml += `
+                let chanpindata = JSON.parse(ajax.responseText);
+                console.log(chanpindata);
+                let chanpinHtml = '';
+                let oUl = document.querySelector('.renqi-list');
+                for (let value of chanpindata) {
+                    chanpinHtml += `
                 <li class="renqi-li">
+                    <div class='col' id="pic1">
                     <img data-original="${value.da_tu}" class="datu lazy"/>
+                    <a href='#'>学会html5 <br />
+                     本课程由浅入深，逐步推进，以示例为主线，详细完整地介绍HTML5的新功能与新特征
+                    </a>
+                    </div>
                     <div class="datu-bottom">
                         <a href="">
                             <img src="${value.xiao_tu}" class="xiaotu"/>${value.pin_pai}
                         </a>
-                        <a href="">${value.shu_liang}</a>
+                        <a href="" class="shuliang">${value.shu_liang}</a>
                     </div>
                 </li>
              `;
 
+                }
+                oUl.innerHTML = chanpinHtml;
+                $("img.lazy").lazyload({
+                    effect: "fadeIn"
+                });
             }
-            oUl.innerHTML = chanpinHtml;
-            $("img.lazy").lazyload({
-                effect: "fadeIn"
-            });
         }
-    }
+        // $('.col').hover(function() {
+        //     $(this).find('a').stop(true).animate({
+        //         top: 0
+        //     });
+        // }, function() {
+        //     $(this).find('a').stop(true).animate({
+        //         top: 170
+        //     });
+        // });
 </script>

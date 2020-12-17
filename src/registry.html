@@ -17,16 +17,16 @@
         </div>
         <div class="regbox">
             <div class="phone">
-                手机号： <input type="text" class="noborder" placeholder="请输入手机号" name="phone">
+                <label for="">手机号：</label> <input type="text" class="noborder" placeholder="请输入手机号" name="phone"><span></span>
             </div>
             <div class="yanzheng">
-                验证码： <input type="text" class="noborder" placeholder="请输入验证码" name="yanzheng">
+                <label for="">验证码：</label> <input type="text" class="noborder" placeholder="请输入验证码" name="yanzheng">
             </div>
             <div class="mima">
-                创建密码： <input type="text" class="noborder" placeholder="6到20位字符组成，区分大小写" name="mima">
+                <label for="">创建密码：</label> <input type="text" class="noborder" placeholder="8到14位字符组成，区分大小写" name="mima"><span></span>
             </div>
             <div class="queren">
-                确认密码： <input type="text" class="noborder" placeholder="请确认密码" name="queren">
+                <label for="">确认密码：</label> <input type="text" class="noborder" placeholder="请确认密码" name="queren"><span></span>
             </div>
             <div class="agree">
                 <input type="checkbox" checked="checked" id="ourtreaty" class="vertPos">
@@ -51,3 +51,154 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./script/Ajaxcallback.js"></script>
 <script src="script/registry.js"></script>
+<script>
+    var oform = document.querySelector('.regform'); //form表单。
+    var phone = document.querySelector('.phone input'); //手机号码
+    var mima = document.querySelector('.mima input'); //密码
+    var queren = document.querySelector('.queren input'); //确认密码
+    var aSpan = document.querySelectorAll('.regform span'); //提示词
+    //给每一个表单设置标记
+    var phoneflag = true;
+    var mimaflag = true;
+    var querenflag = true;
+
+    //1.手机号码
+    //手机号码得到焦点
+    phone.onfocus = function() {
+        aSpan[0].innerHTML = '请输入11位正确的手机号码';
+        aSpan[0].style.color = '#333';
+    }
+
+    //手机号码失去焦点
+    phone.onblur = function() {
+        if (this.value !== '') {
+
+
+            if ((/^1(3|4|5|6|7|8|9)\d{9}$/.test(this.value))) {
+                aSpan[0].innerHTML = '√';
+                aSpan[0].style.color = 'green';
+                phoneflag = true;
+            } else {
+                aSpan[0].innerHTML = '手机号码格式有误';
+                aSpan[0].style.color = 'red';
+                phoneflag = false;
+            }
+        } else {
+            aSpan[0].innerHTML = '手机号码不能为空';
+            aSpan[0].style.color = 'red';
+            phoneflag = false;
+        }
+    }
+
+    //2.密码设置
+    //1种字符  弱
+    //2种字符或者3种字符  中
+    //4种字符  强
+    mima.onfocus = function() {
+        aSpan[1].innerHTML = '请输入密码,长度为8-14个字符';
+        aSpan[1].style.color = '#333';
+    };
+    //检测弱中强
+    mima.oninput = function() {
+        if (this.value.length >= 8 && this.value.length <= 14) { //满足长度
+            var regnum = /\d+/;
+            var reguppercase = /[A-Z]+/;
+            var reglowercase = /[a-z]+/;
+            var other = /[\W_]+/; //特殊字符%&^$#@!*
+            var count = 0; //字符种类的统计结果。
+            if (regnum.test(this.value)) { //值存在数字
+                count++;
+            }
+            if (reguppercase.test(this.value)) {
+                count++;
+            }
+            if (reglowercase.test(this.value)) {
+                count++;
+            }
+            if (other.test(this.value)) {
+                count++;
+            }
+
+            //根据统计的种类输出弱中强
+            switch (count) {
+                case 1:
+                    aSpan[1].innerHTML = '弱';
+                    aSpan[1].style.color = 'red';
+                    mimaflag = false;
+                    break;
+                case 2:
+                case 3:
+                    aSpan[1].innerHTML = '中';
+                    aSpan[1].style.color = 'orange';
+                    mimaflag = true;
+                    break;
+                case 4:
+                    aSpan[1].innerHTML = '强';
+                    aSpan[1].style.color = 'green';
+                    mimaflag = true;
+                    break;
+            }
+
+        } else {
+            aSpan[1].innerHTML = '密码长度有误';
+            aSpan[1].style.color = 'red';
+            mimaflag = false;
+        }
+    };
+    mima.onblur = function() {
+        if (this.value !== '') {
+            if (mimaflag) {
+                aSpan[1].innerHTML = '√';
+                aSpan[1].style.color = 'green';
+                mimaflag = true;
+            }
+        } else {
+            aSpan[1].innerHTML = '密码不能为空';
+            aSpan[1].style.color = 'red';
+            mimaflag = false;
+        }
+    };
+    //3.确认密码
+    queren.onfocus = function() {
+        aSpan[2].innerHTML = '请确认密码';
+        aSpan[2].style.color = '#333';
+    }
+    queren.onblur = function() {
+        if (queren.value != '') {
+            if (mima.value == queren.value) {
+                aSpan[2].innerHTML = '√';
+                aSpan[2].style.color = 'green';
+                mimaflag = true;
+
+            } else if (mima.value != queren.value) {
+                aSpan[2].innerHTML = '确认密码和原密码不一致，请重新输入';
+                aSpan[2].style.color = 'red';
+                mimaflag = false;
+            }
+        }
+
+    }
+
+    //1.阻止表单的直接跳转。
+    oform.onsubmit = function() {
+        if (phone.value === '') {
+            aSpan[0].innerHTML = '手机号码不能为空';
+            aSpan[0].style.color = 'red';
+            phoneflag = false;
+        }
+        if (mima.value === '') {
+            aSpan[1].innerHTML = '密码不能为空';
+            aSpan[1].style.color = 'red';
+            mimaflag = false;
+        }
+
+        if (queren.value === '') {
+            aSpan[2].innerHTML = '确认密码不能为空';
+            aSpan[2].style.color = 'red';
+            querenflag = false;
+        }
+        if (!phoneflag || !mimaflag || !querenflag) {
+            return false;
+        }
+    };
+</script>
