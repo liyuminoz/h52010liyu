@@ -10,6 +10,7 @@
     width: 1000px;
     margin: 0 auto;
     font-size: 14px;
+    padding-top: 150px;
 }
 
 .list li {
@@ -37,6 +38,20 @@
 
 .list li span {
     display: block;
+}
+
+.btn {
+    padding: 20px 0;
+}
+
+.btn button {
+    width: 100px;
+    height: 24px;
+    background: lightcoral;
+    color: #fff;
+    font-weight: bold;
+    line-height: 16px;
+    border: 0;
 }
 
 @import "moreservice"; //more链接和服务区域样式

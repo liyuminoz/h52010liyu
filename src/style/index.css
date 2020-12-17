@@ -116,6 +116,11 @@ img {
 
 .header {
   height: 105px;
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+  left: 0;
+  top: 0;
 }
 
 .header-box {
@@ -278,6 +283,10 @@ img {
   color: #ccc;
 }
 
+.header-nav-box {
+  background: #fff;
+}
+
 .header-nav {
   height: 45px;
   line-height: 45px;
@@ -408,7 +417,7 @@ img {
   width: 1000px;
   height: 475px;
   padding-bottom: 32px;
-  padding-top: 50px;
+  padding-top: 105px;
 }
 
 .lunbo ul li {
@@ -551,7 +560,7 @@ img {
 
 .col a {
   position: absolute;
-  top: 310px;
+  top: 316px;
   left: 0px;
   z-index: 1000;
   width: 316px;

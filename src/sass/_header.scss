@@ -4,6 +4,11 @@
     //header(包括header上面部分和导航部分)
     .header {
         height: 105px;
+        position: fixed;
+        width: 100%;
+        z-index: 2000;
+        left: 0;
+        top: 0;
     }
     
     .header-box {
@@ -176,6 +181,7 @@
     
     .header-nav-box {
         @extend %header-top;
+        background: #fff;
     }
     
     //header-nav

@@ -394,7 +394,6 @@
         if (ajax.readyState === 4) {
 
             let chanpindata = JSON.parse(ajax.responseText);
-            console.log(chanpindata);
             let chanpinHtml = '';
             let oUl = document.querySelector('.renqi-list');
             for (let value of chanpindata) {
@@ -424,13 +423,29 @@
     }
 </script>
 <script>
-    $('.col').hover(function() {
+    $('.renqi-list').on('mouseover', '.col', function() {
         $(this).find('a').stop(true).animate({
             top: 0
         });
-    }, function() {
+    })
+    $('.renqi-list').on('mouseout', '.col', function() {
         $(this).find('a').stop(true).animate({
             top: 316
         });
+    })
+</script>
+<script>
+    const $header = $('.header');
+    $(window).on('scroll', () => {
+        let $scrolltop = $(window).scrollTop(); //获取滚动条top值
+        if ($scrolltop >= 56) {
+            $header.stop(true).animate({
+                top: -56
+            })
+        } else {
+            $header.stop(true).animate({
+                top: 0
+            })
+        }
     });
 </script>

@@ -177,7 +177,7 @@ define(['jcookie'], () => {
                 cookietoarray(); //cookie转换成数组
                 if (window.confirm('你确定要删除吗?')) {
                     $('.goods-item:visible').each(function() {
-                        console.log($(this)); //表示当前遍历的goods-item
+                        // console.log($(this)); //表示当前遍历的goods-item
                         if ($(this).find(':checkbox').is(':checked')) { //当前的复选框是否选中
                             $(this).remove();
                             delcookie($(this).find('img').attr('sid'), $arrsid)

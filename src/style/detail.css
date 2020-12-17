@@ -1,10 +1,54 @@
 @charset "UTF-8";
-* {
-  padding: 0px;
-  margin: 0px;
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+hr,
+form,
+table,
+fieldset,
+legend,
+textarea,
+img,
+ol,
+li,
+ul,
+dl,
+dt,
+dd,
+input,
+button,
+header,
+main,
+footer,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
 }
 
-a {
+section,
+header,
+footer,
+nav,
+aside {
+  display: block;
+}
+
+body {
+  font-size: 12px;
+  font-family: "微软雅黑";
+}
+
+a,
+u {
+  color: #000;
   text-decoration: none;
 }
 
@@ -12,6 +56,359 @@ ul,
 ol,
 li {
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-weight: normal;
+}
+
+input,
+button {
+  outline: 0;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.noborder {
+  border: none !important;
+}
+
+.nobg {
+  background: none !important;
+}
+
+.text_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clearFix:after {
+  content: '';
+  height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+.header {
+  height: 105px;
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+}
+
+.header-box {
+  width: 100%;
+  background: #25292e;
+}
+
+.header-top, .header-nav-box, .header-nav {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.header-top {
+  height: 56px;
+  position: relative;
+}
+
+.header-top-l {
+  float: left;
+  width: 95px;
+  height: 56px;
+  background: url(../images/icon.png) no-repeat 0 9px;
+}
+
+.header-top-l a {
+  display: block;
+  width: 95px;
+  height: 38px;
+  margin-top: 9px;
+}
+
+.header-top-r {
+  float: right;
+  height: 56px;
+  width: 406px;
+}
+
+.logregBtn a {
+  color: #ccc;
+}
+
+.header-top-r li {
+  float: left;
+  height: 56px;
+  line-height: 56px;
+}
+
+.log {
+  margin-right: 8px;
+}
+
+.reg {
+  margin-right: 15px;
+}
+
+.header-top-r .line {
+  width: 1px;
+  height: 8px;
+  margin-top: 25px;
+  background: #878787;
+}
+
+.hcr1-tit {
+  color: #878787;
+  padding: 0 15px;
+}
+
+.hcr1-none {
+  z-index: 1000;
+  width: 300px;
+  display: none;
+  background: #25292e;
+  position: absolute;
+  top: 56px;
+  left: 668px;
+  text-align: center;
+}
+
+.hcr1-none1 {
+  color: #fff;
+  height: 70px;
+  line-height: 70px;
+}
+
+.hcr1-none2 {
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  background: #7dbfde;
+  font-size: 14px;
+  display: block;
+  width: 300px;
+}
+
+.hcr1:hover .hcr1-none {
+  color: #ccc;
+  display: block;
+}
+
+.hcr1 .hcr1-none .hcr1-none2:hover {
+  color: #fff;
+}
+
+.hcr2-news {
+  color: #878787;
+  padding: 0 15px;
+}
+
+.hcr2 a:hover {
+  color: #ccc;
+}
+
+.hcr2-list {
+  z-index: 1000;
+  position: absolute;
+  top: 56px;
+  left: 700px;
+  background: #25292e;
+  width: 150px;
+  display: none;
+}
+
+.hcr2-list .hcr2-a {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  line-height: 40px;
+  color: #ccc;
+}
+
+.hcr2-list .hcr2-a:hover {
+  background: #878787;
+}
+
+.hcr2-a span {
+  margin-left: 80px;
+}
+
+.hcr2:hover .hcr2-list {
+  display: block;
+}
+
+.hcr3 a {
+  color: #878787;
+  padding-left: 15px;
+}
+
+.hcr3 a:hover {
+  color: #ccc;
+}
+
+.hcr4 a {
+  color: #878787;
+  padding-left: 15px;
+}
+
+.hcr4 a:hover {
+  color: #ccc;
+}
+
+.header-nav-box {
+  background: #fff;
+}
+
+.header-nav {
+  height: 45px;
+  line-height: 45px;
+  color: #333;
+  font-size: 15px;
+  position: relative;
+}
+
+.header-nav li {
+  float: left;
+  border-bottom: #ededed solid 4px;
+}
+
+.header-nav li:hover {
+  border-bottom: #25292e solid 4px;
+}
+
+.homepage {
+  width: 118px;
+  height: 45px;
+}
+
+.shop, .magazine, .share, .wiseman {
+  width: 121px;
+  height: 45px;
+  text-align: center;
+}
+
+.search {
+  width: 398px;
+  height: 45px;
+}
+
+.search input {
+  float: right;
+  margin-top: 16px;
+}
+
+.search-fang {
+  padding-top: 4px;
+  width: 46px;
+  height: 40px;
+  background: #fff url(../images/icon.png) no-repeat -167px -142px;
+  float: right;
+}
+
+.shangdian {
+  z-index: 1000;
+  display: none;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 49px;
+  background: #fff;
+  width: 1000px;
+  border-bottom: 4px solid #ccc;
+  transition: all 2s;
+}
+
+.shangdian div {
+  float: left;
+  margin-right: 50px;
+}
+
+.shangdian div img {
+  width: 60px;
+  height: 60px;
+}
+
+.shop:hover .shangdian {
+  display: block;
+}
+
+.zazhi {
+  display: none;
+  z-index: 1000;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 49px;
+  width: 1000px;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  transition: all 2s;
+}
+
+.zazhi a {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 80px;
+  color: silver;
+}
+
+.magazine:hover .zazhi {
+  display: block;
+}
+
+.fenxiang {
+  display: none;
+  z-index: 1000;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 49px;
+  width: 1000px;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  transition: all 1s;
+}
+
+.fenxiang a {
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 80px;
+  color: silver;
+}
+
+.share:hover .fenxiang {
+  display: block;
 }
 
 input {
@@ -83,7 +480,7 @@ input {
   text-decoration: none;
   line-height: 56px;
   text-align: center;
-  background: #fff;
+  background: linear-gradient(30deg, blue, hotpink);
 }
 
 #list {
@@ -143,7 +540,9 @@ input {
 }
 
 .goodsinfo {
-  margin: 100px 0 0 100px;
+  padding-top: 200px;
+  margin: 0 auto;
+  width: 812px;
 }
 
 .goodsinfo-img {
@@ -164,9 +563,14 @@ input {
 
 .p-name {
   width: 350px;
-  height: 50px;
   margin-left: 50px;
   margin-top: 20px;
+  background: linear-gradient(30deg, blue, hotpink);
+  line-height: 40px;
+  font-weight: bold;
+  color: #333;
+  border-top: 5px double gold;
+  font-size: 24px;
 }
 
 .p-name .loadtitle {
@@ -181,6 +585,7 @@ input {
   height: 50px;
   background: rgba(183, 183, 183, 0.4);
   line-height: 50px;
+  font-size: 24px;
 }
 
 .p-btn {
@@ -189,7 +594,6 @@ input {
 
 .p-btn input {
   float: left;
-  display: inline-block;
   width: 50px;
   height: 46px;
   font-size: 20px;
@@ -211,17 +615,20 @@ input {
   text-align: center;
   float: left;
   margin-left: 10px;
+  font-weight: bold;
 }
 
 .box {
   width: 200px;
-  height: 30px;
-  line-height: 30px;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
   position: absolute;
   right: 50px;
-  top: 50px;
-  border: 1px solid red;
+  bottom: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  background: #999;
 }
 
 /*# sourceMappingURL=detail.css.map */
